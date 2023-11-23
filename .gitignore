@@ -1,0 +1,42 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv environment variable files
+.env
+.env.test
+
+# Mac files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# IntelliJ project files
+.idea/
+*.iml
+
+# VSCode project files
+.vscode/
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
