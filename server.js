@@ -15,7 +15,6 @@ app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'))
 
 // Makes the public folder accessible. This is where we can put static files like images, CSS, and JavaScript.
-// https://expressjs.com/en/starter/static-files.html
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Register the routes
