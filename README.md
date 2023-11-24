@@ -8,11 +8,13 @@ Help me set up an express server with the following goals...
 2. Use Pug as the view engine
 3. Endpoints will primarily return HTML and HTML partials, rather than JSON.
 4. The HTML returned from the backend will be enriched with HTMX attributes, as HTMX will be the primary method of adding frontend logic and interactivity.
-5. Dependencies will be installed with npm, rather than using CDN links.
-6. Backend code and frontend code should live together in the same repository, but should have clear logical separation. They should not share a node_modules folder. I understand that this technically makes my project a "monorepo", but I would prefer to avoid using any dedicated monorepo tooling. However, I am open to the idea if you think it would be better in the long run and wouldn't introduce too much operational complexity.
-7. TypeScript will be utilized on both the frontend and backend via JSDoc comments so that transpiling .ts files to .js files is avoided.
-8. Utilize Tailwind v3 for styling. I understand that a typical Tailwind setup requires a build step, either using the Tailwind CLI or using Tailwind as a PostCSS plugin, but the benefits of Tailwind are worth introducing a small amount of operational complexity.
-9. Besides using Tailwind to build the final CSS output, ideally the frontend should not require bundling or other build steps. Rather, it should rely on native browser support for ES modules. Even if dependencies from npm are being used for the frontend, it should all just work, even if that means that I have to restrict myself to only using libraries that are built using ES modules.
+5. Backend dependencies will be installed with npm
+6. Frontend dependencies will rely on CDN links
+7. There should be a `public` folder. If any custom JavaScript is needed for the frontend, scripts will be added to the public folder which will be served statically.
+8. TypeScript will be utilized via JSDoc comments so that transpiling .ts files to .js files is avoided.
+9. Utilize Tailwind v3 for styling. I understand that a typical Tailwind setup requires a build step, either using the Tailwind CLI or using Tailwind as a PostCSS plugin, but the benefits of Tailwind are worth introducing a small amount of operational complexity.
+10. Besides using Tailwind to build the final CSS output, ideally the frontend should not require bundling or other build steps. Rather, it should rely on native browser support for ES modules. Even if dependencies from npm are being used for the frontend, it should all just work, even if that means that I have to restrict myself to only using libraries that are built using ES modules.
+11. Pug should be set up in such a way that I don't have to remember to include the `doctype html` line at the top of every template. Also, I shouldn't have to remember to link Tailwind's CSS file in every template, or include HTMX's script tag in every template. I should be able to just write the HTML that I want to return from the backend, and the view engine should take care of the rest.
 
 In addition the the above requirements, I would like my initial project setup to essentially be a "hello world" application, except that it should be slightly more involved so that I can quickly verify that each of the requirements above is being satisfied.
 

@@ -1,13 +1,13 @@
-import express from "express";
-import { wrap } from "../utils.js";
+import express from 'express'
+import { wrap } from '../utils.js'
 
-const router = express.Router();
+const router = express.Router()
 
 router.get(
-  "/",
+  '/',
   wrap(async (req, res) => {
-    res.render("index", { title: "Hello World" });
+    res.render('index', { title: 'Hello World' })
   })
-);
+)
 
-export default router;
+export default router
