@@ -29,3 +29,4 @@ In addition the the above requirements, I would like my initial project setup to
   - https://dev.to/patarapolw/pug-with-markdown-is-magic-yet-underrated-4dla
 - JSDoc support...
   - https://gils-blog.tayar.org/posts/jsdoc-typings-all-the-benefits-none-of-the-drawbacks/
+  - https://www.prisma.io/blog/type-safe-js-with-jsdoc-typeSaf3js
