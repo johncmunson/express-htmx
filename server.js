@@ -1,6 +1,7 @@
 import express from 'express'
 import path from 'path'
 import indexRouter from './routes/index.js'
+import randomNumberRouter from './routes/randomNumber.js'
 import { fileURLToPath } from 'url'
 
 // __dirname is is a CommonJS feature that is not available in ES modules, so let's replicate it with this workaround
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // Register the routes
 app.use('/', indexRouter)
+app.use('/random-number', randomNumberRouter)
 
 // Listen on the specified port
 app.listen(port, () => {

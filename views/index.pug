@@ -1,6 +1,14 @@
 doctype html
 html
   head
-    title= title
-  body
-    h1 Hello World!
+    title Express
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    script(src='https://cdn.tailwindcss.com/3.3.5')
+    //- To find the integrity hash, add `?meta` to the end of the unpkg url script
+    script(src='https://unpkg.com/htmx.org@1.9.9' integrity='sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX' crossorigin='anonymous')
+  body(class='p-4')
+    h1(class='text-3xl font-bold underline')= pageTitle
+    img(src='/images/avatar.jpg' alt='avatar' class='max-w-xs mt-4')
+    button(hx-get='/random-number' hx-target='#random-number-display' class='px-4 py-2 border border-gray-300 text-gray-700 bg-gray-50 hover:bg-gray-100 mt-4 mr-4') Get Random Number
+    span#random-number-display 73

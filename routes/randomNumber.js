@@ -8,7 +8,8 @@ const router = express.Router()
  * @param {express.Response} res
  */
 async function handler(req, res) {
-  res.render('index', { pageTitle: 'Hello World!' })
+  const randomNumber = Math.floor(Math.random() * 100)
+  res.send(randomNumber.toString())
 }
 
 router.get('/', wrap(handler))
