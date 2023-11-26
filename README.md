@@ -12,3 +12,9 @@
   - https://www.prisma.io/blog/type-safe-js-with-jsdoc-typeSaf3js
 - Tailwind support...
   - https://tailwindcss.com/docs/installation/play-cdn
+- Error handling...
+  - See the `wrap` function in `src/utils.js` which is the start of a solution for async error handling.
+  - The boilerplate from express-generator (with pug) has some error handling included, so look there for inspiration.
+- Testing...
+  - E2E testing should be first priority. Probably want to use Cypress, but there might be something more lightweight.
+  - Unit testing should be second priority. See if we can avoid Jest and use something more lightweight.

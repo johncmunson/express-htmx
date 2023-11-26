@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title Express
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    script(src='https://cdn.tailwindcss.com/3.3.5')
+    //- To find the integrity hash, add `?meta` to the end of the unpkg url script
+    script(src='https://unpkg.com/htmx.org@1.9.9' integrity='sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX' crossorigin='anonymous')
+  body(class='p-4')
+    block content
