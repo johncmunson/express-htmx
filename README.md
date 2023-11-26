@@ -20,3 +20,7 @@
   - Unit testing should be second priority. See if we can avoid Jest and use something more lightweight.
 - Config management and separation of concerns...
   - See how express-generator does it in the `www/bin` file.
+- Dev server and hot reloading
+- So far, the assumption is that frontend interactivity will be handled by HTMX (and possilby \_hyperscript) and therefore no JS will be written. However, if this changes, we may need a separate JSConfig file for the frontend. Scripts might get added to the public folder, e.g. `public/javascripts/custom.js`. Regardless, we still want to completely avoid frontend build steps or bundling.
+- So far, the assumption is that all CSS will be written using Tailwind. However, we will likely need the ability for custom CSS. Should be straightforward though. e.g. `public/stylesheets/custom.css`.
+- Tailwind is awesome, but it's kinda heavy since we're loading it from a CDN and we're not allowing ourselves to use the Tailwind CLI to purge unused styles because that would introduce a build step. Maybe, just maybe, consider using [missing.css](https://missing.style/) which is a classless CSS framework from the creators of htmx.
