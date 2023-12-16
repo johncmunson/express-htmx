@@ -8,7 +8,7 @@ const router = express.Router()
  * @param {express.Response} res
  */
 async function handler(req, res) {
-  res.render('index', { pageTitle: 'Hello World!' })
+  res.render('pages/index', { pageTitle: 'Hello World!' })
 }
 
 router.get('/', wrap(handler))

@@ -1,5 +1,7 @@
 # README
 
+## Technical Notes
+
 - Markdown support...
   - https://pugjs.org/language/filters.html
   - https://expressjs.com/en/advanced/developing-template-engines.html#developing-template-engines-for-express
@@ -28,3 +30,49 @@
   - JSX is familiar, easy, and powerful
   - Since we're writing HTML inside of JS, and not the other way around, we can add type safety to the view layer
   - https://blakewilliams.me/posts/type-safe-server-side-templates-with-express-jsx-react
+
+## Routes
+
+/
+/?page=2
+/posts
+/posts/?page=2
+/posts/2022-01-01-lorem-ipsum
+/about
+/newsletter
+/popular
+/contact
+/tags
+/tags/tag-name
+/feed.xml
+/sitemap.xml
+
+And, I could also add some fun stuff like below. It wouldn't have to be part of the main navigation, but it could be a fun easter egg. Even though it's mainly a blog, I could still have some fun with it. It's my website, after all.
+
+- https://taylor.town/wish-manifesto
+- https://taylor.town/now
+- https://taylor.town/hire-me
+- https://taylor.town/about
+
+## Priorities
+
+0. Save nice styling for last. Focus on functionality first.
+1. Static homepage - 5 hrs
+2. Static post page - 5 hrs
+3. Markdown engine - 5 hrs
+4. Make it work (including pagination and next/prev links) - 2 hrs
+5. Popular posts (static, then make it work) - 2 hrs
+6. Newsletter (static, then make it work)
+7. Contact (static, then make it work)
+8. About
+9. Tags (static, then make it work)
+10. 404
+11. RSS
+12. Analytics, Visitor count
+13. SEO, Sitemap, Robots.txt, Favicons
+14. Dark mode
+15. Comments (static, then make it work)
+
+## Google Doc
+
+https://docs.google.com/document/d/1BkCQu31SdqMYFazJbzlZIp9FNmFkyL_aKWWbfKIZQtY/edit
