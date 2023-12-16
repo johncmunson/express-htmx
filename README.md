@@ -57,21 +57,22 @@ And, I could also add some fun stuff like below. It wouldn't have to be part of 
 ## Priorities
 
 0. Save nice styling for last. Focus on functionality first.
-1. Static homepage - 5 hrs
-2. Static post page - 5 hrs
-3. Markdown engine - 5 hrs
-4. Make it work (including pagination and next/prev links) - 2 hrs
-5. Popular posts (static, then make it work) - 2 hrs
-6. Newsletter (static, then make it work)
-7. Contact (static, then make it work)
-8. About
-9. Tags (static, then make it work)
-10. 404
-11. RSS
-12. Analytics, Visitor count
-13. SEO, Sitemap, Robots.txt, Favicons
-14. Dark mode
-15. Comments (static, then make it work)
+1. Dev server and live reloading
+2. Static homepage - 5 hrs
+3. Static post page - 5 hrs
+4. Markdown engine - 5 hrs
+5. Make it work (including pagination and next/prev links) - 2 hrs
+6. Popular posts (static, then make it work) - 2 hrs
+7. Newsletter (static, then make it work)
+8. Contact (static, then make it work)
+9. About
+10. Tags (static, then make it work)
+11. 404
+12. RSS
+13. Analytics, Visitor count
+14. SEO, Sitemap, Robots.txt, Favicons
+15. Dark mode
+16. Comments (static, then make it work)
 
 ## Google Doc
 
