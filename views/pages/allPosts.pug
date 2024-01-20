@@ -1,0 +1,7 @@
+extends ../layouts/layout
+
+block content 
+  ul
+    each post in allPosts
+      li
+        a(href='/posts/' + post.slug)= post.title + ' - ' + post.date

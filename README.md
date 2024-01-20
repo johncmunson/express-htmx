@@ -1,5 +1,9 @@
 # README
 
+## Google Doc
+
+https://docs.google.com/document/d/1BkCQu31SdqMYFazJbzlZIp9FNmFkyL_aKWWbfKIZQtY/edit
+
 ## Technical Notes
 
 - Markdown support...
@@ -31,21 +35,129 @@
   - Since we're writing HTML inside of JS, and not the other way around, we can add type safety to the view layer
   - https://blakewilliams.me/posts/type-safe-server-side-templates-with-express-jsx-react
 
+## Header / Footer
+
+**Header**
+
+- [x] Popular Posts
+- [x] Newsletter
+- [x] RSS
+- [x] About Page
+- [x] Contact
+- [x] Dark Mode Toggle
+- [ ] Optional: Projects (These could probably just go on the About Page tbh. Probably wouldn’t need a Projects page unless I really had a bunch of projects and it warranted a dedicated page.)
+
+**Footer**
+
+- Keep it simple. Probably don’t need to duplicate the stuff in the header.
+- [x] Inspirational quote
+- [x] Newsletter CTA
+
 ## Routes
 
-/
-/?page=2
-/posts
-/posts/?page=2
-/posts/2022-01-01-lorem-ipsum
-/about
-/newsletter
-/popular
-/contact
-/tags
-/tags/tag-name
-/feed.xml
-/sitemap.xml
+_Note_: paginated true means `?page=2`
+
+**Homepage**
+
+- Right Now:
+  - [x] about blurb
+  - [x] recent articles
+  - [x] link to "all posts" page
+- In the future:
+  - [ ] popular articles
+  - [ ] projects
+- Paginated: false
+- URL: `/`
+
+**All Posts**
+
+- Right Now:
+  - [x] a list of all the posts
+  - [ ] ...sorted by publish date
+- Paginated: true
+- URL: `/posts`
+
+**Popular Posts**
+
+We'll just utilize the tag system and the "popular" tag to create the Popular Posts page
+
+**Blog Post Page**
+
+- Right Now:
+  - Frontmatter
+    - [ ] Publish date
+    - [ ] Title
+    - [ ] URL
+      - don't derive the URL from the title, as it could change in the future
+      - should the publish date be part of the URL?
+    - [ ] Tags
+    - [ ] Cover Photo
+    - [ ] Summary
+    - Body content
+      - [ ] Written in markdown
+      - [ ] Styled nicely
+      - [ ] Supports headers and images and all the other standard markdown stuff
+    - [ ] Next / Previous links
+- In the future:
+  - syntax highlighting for code snippets
+  - comments section
+  - Only on desktop view...
+    - Autolinked headers (subheaders not allowed)
+    - ToC if there are more than 5 headers
+    - popular articles
+    - recent articles
+    - projects
+- Paginated: false
+- URL: `/posts/2022-01-01-lorem-ipsum`
+
+**About Page**
+
+- Right Now:
+  - [ ] A more detailed version of the blurb on the homepage
+  - [ ] Photo
+  - [ ] Social links
+  - Etc.
+- Paginated: false
+- URL: `/about`
+
+**Newsletter**
+
+- Right now:
+  - [ ] Describe what the newsletter is about
+  - [ ] Provide a list of all old newsletters (if they aren’t just repackaged blog posts)
+  - [ ] Newsletter CTA
+- Paginated: false
+- URL: `/newsletter`
+
+**Contact**
+
+- Right now:
+  - Contact form
+- Paginated: false
+- URL: `/contact`
+
+**Tags Page**
+
+- Right now:
+  - An alphabetical list of all the tags in use on the blog
+  - Each tag has a number for how many times it has been used
+- Paginated: false
+- URL: `/posts/tags`
+
+**Individual Tag Page**
+
+- Right now:
+  - The name of the tag
+  - A list of all of the posts using that tag
+- Paginated: false
+- URL: `/posts/tags/lorem-upsum`
+
+**Other Misc Pages**
+
+- feed.xml
+- sitemap.xml
+- 404
+- robots
 
 And, I could also add some fun stuff like below. It wouldn't have to be part of the main navigation, but it could be a fun easter egg. Even though it's mainly a blog, I could still have some fun with it. It's my website, after all.
 
@@ -73,7 +185,3 @@ And, I could also add some fun stuff like below. It wouldn't have to be part of 
 14. SEO, Sitemap, Robots.txt, Favicons
 15. Dark mode
 16. Comments (static, then make it work)
-
-## Google Doc
-
-https://docs.google.com/document/d/1BkCQu31SdqMYFazJbzlZIp9FNmFkyL_aKWWbfKIZQtY/edit

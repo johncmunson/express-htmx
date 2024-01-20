@@ -1,11 +1,35 @@
 extends ../layouts/layout
 
 block content
-  h1(class='text-3xl font-bold underline')= pageTitle
-  img(src='/images/avatar.jpg' alt='avatar' class='max-w-xs mt-4')
-  button(
-    hx-get='/random-number'
-    hx-target='#random-number-display'
-    class='px-4 py-2 border border-gray-300 text-gray-700 bg-gray-50 hover:bg-gray-100 mt-4 mr-4'
-  ) Get Random Number
-  span#random-number-display 73
+  //- h1(class='text-3xl font-bold underline')= pageTitle
+  //- img(src='/images/avatar.jpg' alt='avatar' class='max-w-xs mt-4')
+  //- button(
+  //-   hx-get='/random-number'
+  //-   hx-target='#random-number-display'
+  //-   class='px-4 py-2 border border-gray-300 text-gray-700 bg-gray-50 hover:bg-gray-100 mt-4 mr-4'
+  //- ) Get Random Number
+  //- span#random-number-display 73
+  -
+    var blogPosts = [
+      { title: 'The Art of Web Development', date: '2023-01-01' },
+      { title: 'Exploring the World of AI', date: '2023-01-15' },
+      { title: 'Gardening Tips for Beginners', date: '2023-02-01' },
+      { title: 'The Best Travel Destinations of 2023', date: '2023-02-15' },
+      { title: 'Understanding Cryptocurrency', date: '2023-03-01' },
+      { title: 'Healthy Eating: Myths and Facts', date: '2023-03-15' },
+      { title: 'Getting Started with Yoga', date: '2023-04-01' },
+      { title: 'The Future of Renewable Energy', date: '2023-04-15' },
+      { title: 'Photography: Capturing the Moment', date: '2023-05-01' },
+      { title: 'The Joy of Painting', date: '2023-05-15' }
+    ]
+  br
+  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc viverra pharetra aliquet. Curabitur sagittis, nisi quis congue maximus, sapien turpis mattis nunc, non auctor massa purus ac nunc. Sed sed felis eget velit aliquet bibendum nec vitae lorem. Morbi tincidunt eget nibh quis molestie. Fusce convallis, mauris sed auctor auctor, quam velit cursus tortor, eget consequat tortor est at velit. Nulla facilisi.
+  br
+  ul
+    each post in blogPosts
+      li
+        a(href='/posts/2022-01-01-lorem-ipsum')= post.title + ' - ' + post.date
+  br
+  a(href='/posts') All Posts ->
+  br
+  br
