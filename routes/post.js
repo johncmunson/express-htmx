@@ -1,7 +1,7 @@
 import express from 'express'
 import { wrap } from '../utils.js'
 
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 
 const post = {
   title: 'Post Title',

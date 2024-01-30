@@ -1,7 +1,7 @@
 import express from 'express'
 import { wrap } from '../utils.js'
 
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 
 const allPosts = [
   { title: 'The Art of Web Development', date: '2023-01-01' },
