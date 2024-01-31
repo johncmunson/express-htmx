@@ -1,7 +1,5 @@
 extends ../layouts/layout
 
+//- Could add a wrapper div here if needed, between block and the include
 block content
-  br
-  h1= title
-  p= content
-  br
+  | !{includeBlogPost(postSlug)}

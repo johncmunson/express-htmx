@@ -6,6 +6,8 @@ https://docs.google.com/document/d/1BkCQu31SdqMYFazJbzlZIp9FNmFkyL_aKWWbfKIZQtY/
 
 ## Technical Notes
 
+- Consider adding a `npm run build` command to preprocess the markdown files, instead of processing them on
+  every request, kinda like how a static site generator would do
 - Markdown support...
   - https://pugjs.org/language/filters.html
   - https://expressjs.com/en/advanced/developing-template-engines.html#developing-template-engines-for-express
