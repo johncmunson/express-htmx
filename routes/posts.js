@@ -1,5 +1,6 @@
 import express from 'express'
 import { wrap } from '../utils.js'
+import { getPaginatedPosts } from '../lib/md.js'
 
 const router = express.Router({ mergeParams: true })
 
@@ -30,12 +31,18 @@ const allPosts = [
   { title: 'Go: The Versatile Programming Language', date: '2023-12-15' },
 ]
 
+// TODO: return 404 if page is out of range
+// TODO: render previous and next links
+
 /**
  * @param {express.Request} req
  * @param {express.Response} res
  */
 async function handler(req, res) {
-  res.render('pages/allPosts', { allPosts })
+  const page = Number(req.query.page) || 1
+  const posts = getPaginatedPosts(page)
+
+  res.render('pages/posts', { posts })
 }
 
 router.get('/', wrap(handler))

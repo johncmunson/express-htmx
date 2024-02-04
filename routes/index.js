@@ -1,5 +1,6 @@
 import express from 'express'
 import { wrap } from '../utils.js'
+import { getFirstThreePosts } from '../lib/md.js'
 
 const router = express.Router({ mergeParams: true })
 
@@ -8,7 +9,8 @@ const router = express.Router({ mergeParams: true })
  * @param {express.Response} res
  */
 async function handler(req, res) {
-  res.render('pages/index', { pageTitle: 'Hello World!' })
+  const firstThreePosts = getFirstThreePosts()
+  res.render('pages/index', { firstThreePosts })
 }
 
 router.get('/', wrap(handler))

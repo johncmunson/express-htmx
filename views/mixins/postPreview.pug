@@ -1,0 +1,3 @@
+mixin postPreview(post)
+  a(href='/posts/' + post.slug)= post.frontmatter.title + ' - ' + post.publishDate
+  p= post.frontmatter.description

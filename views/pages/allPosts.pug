@@ -1,7 +1,0 @@
-extends ../layouts/mainLayout
-
-block content 
-  ul
-    each post in allPosts
-      li
-        a(href='/posts/2021-08-25-lorem-ipsum')= post.title + ' - ' + post.date
