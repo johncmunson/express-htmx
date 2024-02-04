@@ -1,8 +1,11 @@
 extends ../layouts/mainLayout
 include ../mixins/prevNext
 
-//- Could add a wrapper div here if needed, between block and the include
+//- Could add a wrapper div around the content if needed
 block content
-  | !{includeBlogPost(postSlug)}
+  if post.frontmatter.coverPhoto
+    img(src=post.frontmatter.coverPhoto, alt=post.frontmatter.title)
+  p= post.frontmatter.description
+  | !{post.html}
   br
   +prevNext(prevLink, nextLink)

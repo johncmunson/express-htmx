@@ -14,20 +14,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const app = express()
 const port = 3000
 
-// TODO: DON'T RENDER A NEW POST FOR EVERY REQUEST!!!
-//       Instead, render the post once and cache the result.
-
-/**
- * Pug doesn't support a dynamic include, so we need to create a custom function to do this
- * and register it with Pug.
- * https://stackoverflow.com/questions/45824697/workaround-to-dynamic-includes-in-pug-jade
- *
- * @param {string} slug
- * @param {import("pug").Options} [options={}] options
- * @returns {string}
- */
-app.locals.includeBlogPost = (slug, options = {}) => new Post(slug).html
-
 // Set the view engine to Pug
 app.set('view engine', 'pug')
 
