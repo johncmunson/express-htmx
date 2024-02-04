@@ -1,5 +1,8 @@
 extends ../layouts/mainLayout
+include ../mixins/prevNext
 
 //- Could add a wrapper div here if needed, between block and the include
 block content
   | !{includeBlogPost(postSlug)}
+  br
+  +prevNext(prevLink, nextLink)

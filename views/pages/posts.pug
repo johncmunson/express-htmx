@@ -1,5 +1,6 @@
 extends ../layouts/mainLayout
 include ../mixins/postPreview
+include ../mixins/prevNext
 
 block content 
   ul
@@ -7,8 +8,4 @@ block content
       li
         +postPreview(post)
   br
-  div
-    if prevLink
-      a(href=prevLink) Previous
-    if nextLink
-      a(href=nextLink) Next
+  +prevNext(prevLink, nextLink)
