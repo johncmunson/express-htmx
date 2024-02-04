@@ -6,3 +6,9 @@ block content
     each post in posts
       li
         +postPreview(post)
+  br
+  div
+    if prevLink
+      a(href=prevLink) Previous
+    if nextLink
+      a(href=nextLink) Next
