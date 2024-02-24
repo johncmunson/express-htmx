@@ -5,6 +5,7 @@ include ../mixins/prevNext
 block content
   if post.frontmatter.coverPhoto
     img(src=post.frontmatter.coverPhoto, alt=post.frontmatter.title)
+  h1= post.frontmatter.title
   p= post.frontmatter.description
   | !{post.html}
   br
