@@ -1,3 +1,12 @@
-mixin postPreview(post)
-  a(href='/posts/' + post.slug)= post.frontmatter.title + ' - ' + post.publishDate
-  p= post.frontmatter.description
+mixin postPreview(post, isFirst)
+  div(class=`flex flex-col sm:flex-col-reverse ${isFirst ? '' : '-sm:mt-8'}`)
+    div(class="font-mono text-xs")
+      | #{post.publishDate.replace(/-/g, '.')}
+    a(href=`/posts/${post.slug}` class="font-medium hover:text-primary-400")
+      | #{post.frontmatter.title}
+  div(class="col-span-2")
+    a(href=`/posts/${post.slug}`)
+      span
+        span(class='hover:text-primary-400')
+          | #{post.frontmatter.description}
+        span.text-primary-400  →

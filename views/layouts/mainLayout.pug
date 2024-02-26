@@ -1,23 +1,21 @@
 doctype html
 html
   head
-    title Express
+    title John Munson's Blog
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //- Dark mode setup
+    //- might consider inlining the darkMode.css and darkMode.js if it helps improve FOUC
+    link(rel='stylesheet', href='/styles/darkMode.css')
+    script(src='/scripts/darkMode.js')
+    //- Tailwind setup
     script(src='https://cdn.tailwindcss.com/3.3.5')
-    script.
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: tailwind.colors.sky,
-            }
-          }
-        }
-      }
+    script(src='/scripts/tailwindConfig.js')
+    //- HTMX setup
     //- To find the integrity hash, add `?meta` to the end of the unpkg url script
     script(src='https://unpkg.com/htmx.org@1.9.9' integrity='sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX' crossorigin='anonymous')
-  body(class='p-4')
-    include ../partials/header
-    block content
-    include ../partials/footer
+  body(class='mt-12 mx-4 sm:mx-8 md:mx-20 bg-neutral-100 dark:bg-neutral-900 dark:text-white')
+    div(class='max-w-5xl mx-auto')
+      include ../partials/header
+      block content
+      include ../partials/footer

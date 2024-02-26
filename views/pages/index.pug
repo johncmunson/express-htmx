@@ -2,22 +2,22 @@ extends ../layouts/mainLayout
 include ../mixins/postPreview
 
 block content
-  //- h1(class='text-3xl font-bold underline')= pageTitle
-  //- img(src='/images/avatar.jpg' alt='avatar' class='max-w-xs mt-4')
-  //- button(
-  //-   hx-get='/random-number'
-  //-   hx-target='#random-number-display'
-  //-   class='px-4 py-2 border border-gray-300 text-gray-700 bg-gray-50 hover:bg-gray-100 mt-4 mr-4'
-  //- ) Get Random Number
-  //- span#random-number-display 73
-  br
-  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc viverra pharetra aliquet. Curabitur sagittis, nisi quis congue maximus, sapien turpis mattis nunc, non auctor massa purus ac nunc. Sed sed felis eget velit aliquet bibendum nec vitae lorem. Morbi tincidunt eget nibh quis molestie. Fusce convallis, mauris sed auctor auctor, quam velit cursus tortor, eget consequat tortor est at velit. Nulla facilisi.
-  br
-  ul
-    each post in firstThreePosts
-      li
-        +postPreview(post)
-  br
-  a(href='/posts') All Posts ->
-  br
-  br
+  p(class='mt-10' style="text-align: justify; text-justify: inter-word; hyphens: auto;")
+    span.font-medium Howdy there!
+    |  Just me here, welcoming you to my blog. It's a casual affair, really. This is where I'll be jotting down thoughts, stories, and maybe the occasional insight. No set schedule, just whenever I find the motivation to share. I hope you find something interesting here. If you do, feel free to share it with your friends. If you don't, feel free to share it with your enemies. Either way, I'm happy you're here.
+  div(class='sm:grid sm:grid-cols-3 sm:gap-y-8 sm:gap-x-4 items-start mt-12')
+    each post, i in firstThreePosts
+      - const isFirst = i === 0;
+      +postPreview(post, isFirst)
+  a(href='/posts' class='block mt-8')
+    span(class='hover:text-primary-400') All Posts
+    span.text-primary-400  →
+
+//- h1(class='text-3xl font-bold underline')= pageTitle
+//- img(src='/images/avatar.jpg' alt='avatar' class='max-w-xs mt-4')
+//- button(
+//-   hx-get='/random-number'
+//-   hx-target='#random-number-display'
+//-   class='px-4 py-2 border border-gray-300 text-gray-700 bg-gray-50 hover:bg-gray-100 mt-4 mr-4'
+//- ) Get Random Number
+//- span#random-number-display 73
