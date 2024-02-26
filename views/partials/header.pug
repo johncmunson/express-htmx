@@ -1,7 +1,8 @@
 header
   nav(class="flex flex-col md:flex-row md:justify-between")
-    //- Bring back the wavy lines under the title from the old blog
-    a(href='/' class="font-bold") John Munson's Blog
+    div.relative
+      a(href='/' class="font-bold") John Munson's Blog
+      a(href='/' class="font-bold absolute top-0 left-0 underline decoration-wavy underline-offset-8 opacity-0 hover:opacity-100 transition-[opacity] duration-500 ease-in-out") John Munson's Blog
     ul(class="flex mt-3 md:mt-0")
       li
         a(href='/posts/tags/popular') Popular
