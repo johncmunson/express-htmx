@@ -17,6 +17,7 @@ https://docs.google.com/document/d/1BkCQu31SdqMYFazJbzlZIp9FNmFkyL_aKWWbfKIZQtY/
   - https://julianterenzio.io/blog/Building%20A%20Markdown%20Blog%20App%20with%20Express%20and%C2%A0EJS
   - https://dev.to/patarapolw/pug-with-markdown-is-magic-yet-underrated-4dla
 - JSDoc support...
+  - https://alexharri.com/blog/jsdoc-as-an-alternative-typescript-syntax
   - https://gils-blog.tayar.org/posts/jsdoc-typings-all-the-benefits-none-of-the-drawbacks/
   - https://www.prisma.io/blog/type-safe-js-with-jsdoc-typeSaf3js
 - Tailwind support...
