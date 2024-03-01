@@ -1,6 +1,6 @@
 mixin postPreview(post, isFirst)
   div(class=`flex flex-col sm:flex-col-reverse ${isFirst ? '' : '-sm:mt-8'}`)
-    div(class="font-mono text-xs")
+    div(class="font-mono text-xs sm:mt-1")
       | #{post.publishDate.replace(/-/g, '.')}
     a(href=`/posts/${post.slug}` class='font-medium hover:text-primary-400')
       | #{post.frontmatter.title}
