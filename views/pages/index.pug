@@ -1,5 +1,6 @@
 extends ../layouts/mainLayout
 include ../mixins/postList
+include ../mixins/prevNextFooterDivider
 
 block content
   p(class='mt-10' style="text-align: justify; text-justify: inter-word; hyphens: auto;")
@@ -9,6 +10,7 @@ block content
   a(href='/posts' class='block mt-8')
     span(class='hover:text-primary-400') All Posts
     span.text-primary-400  →
+  +prevNextFooterDivider
 
 //- h1(class='text-3xl font-bold underline')= pageTitle
 //- img(src='/images/avatar.jpg' alt='avatar' class='max-w-xs mt-4')

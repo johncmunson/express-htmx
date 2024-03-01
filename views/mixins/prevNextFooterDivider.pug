@@ -1,0 +1,15 @@
+mixin prevNextFooterDivider(prevLink, nextLink)
+  div(class='flex items-center gap-4 mt-14')
+    if prevLink
+      a(href=prevLink class='hover:text-primary-400' class='flex items-center')
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        | Previous
+    else
+      a(href='', class='hidden') Previous
+    div(class='grow h-px bg-neutral-300 dark:bg-neutral-700')
+    if nextLink
+      a(href=nextLink class='hover:text-primary-400' class='flex items-center')
+        | Next
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    else
+      a(href='', class='hidden') Next

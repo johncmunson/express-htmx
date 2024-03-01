@@ -1,7 +1,7 @@
 extends ../layouts/mainLayout
-include ../mixins/prevNext
+include ../mixins/prevNextFooterDivider
 
-//- Could add a wrapper div around the content if needed
+//- Could add a wrapper div (or main) around the content if needed
 block content
   if post.frontmatter.coverPhoto
     img(src=post.frontmatter.coverPhoto, alt=post.frontmatter.title)
@@ -9,4 +9,4 @@ block content
   p= post.frontmatter.description
   | !{post.html}
   br
-  +prevNext(prevLink, nextLink)
+  +prevNextFooterDivider(prevLink, nextLink)
