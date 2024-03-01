@@ -4,7 +4,6 @@ mixin postPreview(post, isFirst)
       | #{post.publishDate.replace(/-/g, '.')}
     a(href=`/posts/${post.slug}` class='font-medium hover:text-primary-400')
       | #{post.frontmatter.title}
-  div(class="col-span-2")
-    a(href=`/posts/${post.slug}` class='hover:text-primary-400 block' style="text-align: justify; text-justify: inter-word; hyphens: auto;")
-      | #{post.frontmatter.description}&nbsp;&nbsp;
-      span(class='text-primary-400') →
+  a(href=`/posts/${post.slug}` class='col-span-2 hover:text-primary-400 mt-1 sm:mt-auto inline-block' style="text-align: justify; text-justify: inter-word; hyphens: auto;")
+    | #{post.frontmatter.description}&nbsp;&nbsp;
+    span(class='text-primary-400') →
