@@ -1,0 +1,4 @@
+.h2-with-hash::before {
+  content: '#';
+  margin-right: 0.5rem; /* Equivalent to Tailwind's mr-2 */
+}
