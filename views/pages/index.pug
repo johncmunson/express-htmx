@@ -1,12 +1,12 @@
 extends ../layouts/mainLayout
-include ../mixins/postList
+include ../mixins/postPreviewList
 include ../mixins/prevNextFooterDivider
 
 block content
   p(class='mt-12' style="text-align: justify; text-justify: inter-word; hyphens: auto;")
     span.font-medium Howdy there!
     |  Just me here, welcoming you to my blog. It's a casual affair, really. This is where I'll be jotting down thoughts, stories, and maybe the occasional insight. No set schedule, just whenever I find the motivation to share. I hope you find something interesting here. If you do, feel free to share it with your friends. If you don't, feel free to share it with your enemies. Either way, I'm happy you're here.
-  +postList(firstThreePosts)
+  +postPreviewList(firstThreePosts)
   a(href='/posts' class='block mt-8')
     span(class='hover:text-primary-400') All Posts
     span.text-primary-400 &nbsp;&nbsp;→

@@ -1,12 +1,15 @@
 extends ../layouts/mainLayout
 include ../mixins/prevNextFooterDivider
+include ../mixins/postPreviewList
 
-//- Could add a wrapper div (or main) around the content if needed
 block content
-  if post.frontmatter.coverPhoto
-    img(src=post.frontmatter.coverPhoto, alt=post.frontmatter.title)
-  h1= post.frontmatter.title
-  p= post.frontmatter.description
-  | !{post.html}
-  br
+  - const asPostHeader = true;
+  main
+    +postPreviewList([post], asPostHeader)
+    if post.frontmatter.coverPhoto
+      img(src=post.frontmatter.coverPhoto, alt=post.frontmatter.title, class='mb-10 mt-6 w-full h-auto rounded-md border border-neutral-300 dark:border-neutral-600')
+    | !{post.html}
+  a(href='#' class='inline-block mt-10 mr-4 hover:underline') Tags: 
+    each tag, i in post.frontmatter.tags
+      a(href='#' class='bg-neutral-200 dark:bg-neutral-700 rounded-full mr-3 px-3 py-1 hover:py-2 outline outline-neutral-300 dark:outline-neutral-600 outline-offset-1 hover:outline-primary-400 dark:hover:outline-primary-400')= tag
   +prevNextFooterDivider(prevLink, nextLink)
