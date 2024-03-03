@@ -4,8 +4,6 @@ import { getPaginatedPosts } from '../lib/md.js'
 
 const router = express.Router({ mergeParams: true })
 
-// TODO: render previous and next links
-
 /**
  * @param {express.Request} req
  * @param {express.Response} res

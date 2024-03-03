@@ -1,6 +1,7 @@
 extends ../layouts/mainLayout
 include ../mixins/prevNextFooterDivider
 include ../mixins/postPreviewList
+include ../mixins/tag
 
 block content
   - const asPostHeader = true;
@@ -9,7 +10,8 @@ block content
     if post.frontmatter.coverPhoto
       img(src=post.frontmatter.coverPhoto, alt=post.frontmatter.title, class='mb-10 mt-6 w-full h-auto rounded-md border border-neutral-300 dark:border-neutral-600')
     | !{post.html}
-  a(href='#' class='inline-block mt-10 mr-4 text-lg hover:underline') Tags: 
+  div.mt-10.inline-flex.gap-4.items-baseline
+    a(href='/posts/tags' class='text-lg underline hover:text-primary-400') Tags:
     each tag, i in post.frontmatter.tags
-      a(href='#' class='bg-neutral-200 dark:bg-neutral-700 rounded-full mr-3 px-3 py-1 hover:py-2 outline outline-neutral-300 dark:outline-neutral-600 outline-offset-1 hover:outline-primary-400 dark:hover:outline-primary-400')= tag
+      +tag(tag, `#`)
   +prevNextFooterDivider(prevLink, nextLink)

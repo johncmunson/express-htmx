@@ -6,6 +6,7 @@ import indexRouter from './routes/index.js'
 // import randomNumberRouter from './routes/randomNumber.js'
 import postsRouter from './routes/posts.js'
 import postRouter from './routes/post.js'
+import tagsRouter from './routes/tags.js'
 
 // __dirname is is a CommonJS feature that is not available in ES modules, so let's replicate it with this workaround
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 // app.use('/random-number', randomNumberRouter)
 app.use('/posts', postsRouter)
+app.use('/posts/tags', tagsRouter)
 app.use('/posts/:postSlug', postRouter)
 
 // Listen on the specified port
