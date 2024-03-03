@@ -1,5 +1,5 @@
 mixin postPreviewList(posts, asPostHeader = false)
-  div(class='sm:grid sm:grid-cols-3 sm:gap-y-10 sm:gap-x-8 mt-12')
+  div(class='sm:grid sm:grid-cols-3 sm:gap-y-10 sm:gap-x-8')
     each post, i in posts
       - const isFirst = i === 0;
       if !asPostHeader

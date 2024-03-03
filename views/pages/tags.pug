@@ -3,7 +3,8 @@ include ../mixins/tag
 include ../mixins/prevNextFooterDivider
 
 block content
-  main.mt-14
+  div.h-2
+  main
     div.flex.gap-6
       each count, tag in tags
         +tag(tag, `#`, count)
