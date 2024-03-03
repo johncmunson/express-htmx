@@ -3,5 +3,11 @@ include ../mixins/postPreviewList
 include ../mixins/prevNextFooterDivider
 
 block content
+  h1.text-2xl.font-medium
+    if tag
+      | Posts tagged with:&nbsp;&nbsp;#{tag}
+    else
+      | All posts
+  div.h-10
   +postPreviewList(posts)
   +prevNextFooterDivider(prevLink, nextLink)

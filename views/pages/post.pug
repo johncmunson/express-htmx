@@ -13,5 +13,5 @@ block content
   div.mt-10.inline-flex.gap-4.items-baseline
     a(href='/posts/tags' class='text-lg underline hover:text-primary-400') Tags:
     each tag, i in post.frontmatter.tags
-      +tag(tag, `#`)
+      +tag(tag)
   +prevNextFooterDivider(prevLink, nextLink)

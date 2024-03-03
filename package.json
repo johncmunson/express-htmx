@@ -29,6 +29,6 @@
     "typescript": "^5.3.2"
   },
   "nodemonConfig": {
-    "ext": "js,pug,md,json"
+    "ext": "js,pug,md,json,css"
   }
 }
