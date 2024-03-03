@@ -1,19 +1,21 @@
 mixin postPreviewList(posts, asPostHeader = false)
-  div(class='sm:grid sm:grid-cols-3 sm:gap-y-8 sm:gap-x-8 items-start mt-12')
-    each post, i in posts
-      - const isFirst = i === 0;
-      if !asPostHeader
-        div(class=`flex flex-col sm:flex-col-reverse ${isFirst ? '' : '-sm:mt-8'}`)
-          div(class="font-mono text-sm sm:mt-1")
-            | #{post.publishDate.replace(/-/g, '.')}
-          a(href=`/posts/${post.slug}` class='font-medium text-lg hover:text-primary-400')
-            | #{post.frontmatter.title}
-        a(href=`/posts/${post.slug}` class='col-span-2 hover:text-primary-400 mt-1 sm:mt-auto inline-block' style="text-align: justify; text-justify: inter-word; hyphens: auto;")
-          | #{post.frontmatter.description}&nbsp;&nbsp;
-          span(class='text-primary-400') →
-      else
-        div(class='flex flex-col sm:flex-col-reverse')
-          div(class="font-mono text-sm sm:mt-1")
-            | #{post.publishDate.replace(/-/g, '.')}
-          span(class='font-medium text-lg')= post.frontmatter.title
-        span(class='col-span-2 mt-1 sm:mt-auto inline-block' style="text-align: justify; text-justify: inter-word; hyphens: auto;")= post.frontmatter.description
+  div.container
+    div(class='sm:grid sm:grid-cols-3 sm:gap-y-10 sm:gap-x-8 mt-12')
+      each post, i in posts
+        - const isFirst = i === 0;
+        if !asPostHeader
+          div(class='col-span-1')
+            div(class=`flex flex-col sm:flex-col-reverse ${isFirst ? '' : '-sm:mt-10'}`)
+              div(class="font-mono text-sm sm:mt-1") #{post.publishDate.replace(/-/g, '.')}
+              a(href=`/posts/${post.slug}` class='font-medium text-lg hover:text-primary-400')= post.frontmatter.title
+          div(class='col-span-2')
+            a(href=`/posts/${post.slug}` class='hover:text-primary-400 mt-2 sm:mt-auto sm:pt-0.5 inline-block' style="text-align: justify; text-justify: inter-word; hyphens: auto;")
+              | #{post.frontmatter.description}&nbsp;&nbsp;
+              span(class='text-primary-400') →
+        else
+          div(class='col-span-1')
+            div(class=`flex flex-col sm:flex-col-reverse ${isFirst ? '' : '-sm:mt-10'}`)
+              div(class="font-mono text-sm sm:mt-1") #{post.publishDate.replace(/-/g, '.')}
+              span(class='font-medium text-lg')= post.frontmatter.title
+          div(class='col-span-2')
+            p(class='mt-2 sm:mt-auto sm:pt-0.5' style="text-align: justify; text-justify: inter-word; hyphens: auto;")= post.frontmatter.description
