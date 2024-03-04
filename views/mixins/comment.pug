@@ -1,0 +1,19 @@
+//- type Comment = { name: string, date: string, content: string, upvotes: number, downvotes: number }
+mixin comment(comment)
+  div(class='rounded-lg p-6 shadow-lg dark:shadow-neutral-800')
+    p.border-b.border-neutral-300.text-lg.font-medium
+      | John Munson 
+      span.font-light commented 3 days ago
+    div.mt-4.space-y-2
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    div.mt-4.flex.items-center.justify-end
+      button
+        span.sr-only Upvote
+        | 👍
+      span.ml-2 27
+      button.ml-4
+        span.sr-only Downvote
+        | 👎
+      span.ml-2 4
