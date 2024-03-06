@@ -1,20 +1,23 @@
-header(class='pb-1 border-b border-neutral-300')
+header(class='pb-4 840bp:pb-2 border-b border-neutral-300')
   - const blogTitle = "John Munson's Blog";
-  nav(class="flex flex-col md:flex-row md:justify-between")
-    div.relative
-      a(href='/' class="font-medium text-lg")= blogTitle
-      a(href='/' class="font-medium text-lg absolute top-0 left-0 underline decoration-wavy underline-offset-8 opacity-0 hover:opacity-100 transition-[opacity] duration-500 ease-in-out")= blogTitle
-    ul(class="flex text-lg mt-3 md:mt-0")
-      li
+  nav(class="text-lg flex flex-col 840bp:flex-row 840bp:items-baseline 840bp:justify-between")
+    div(class='flex')
+      div(class='relative font-medium whitespace-nowrap')
+        a(href='/')= blogTitle
+        a(href='/' class="absolute top-0 left-0 underline decoration-wavy underline-offset-8 opacity-0 hover:opacity-100 transition-[opacity] duration-500 ease-in-out")= blogTitle 
+      span(class='ml-6 840bp:hidden')
+        include ../partials/darkModeToggle 
+    ul(class='flex flex-wrap mt-2 840bp:mt-0')
+      li(class='mr-4')
         a(href='/posts/tags/popular') Popular
-      li(class='ml-4')
+      li(class='mr-4')
         a(href='/newsletter') Newsletter
-      li(class='ml-4')
+      li(class='mr-4')
         a(href='/feeds.xml') RSS
-      li(class='ml-4')
+      li(class='mr-4')
         a(href='/about') About
-      li(class='ml-4')
+      li(class='840bp:mr-6')
         a(href='/contact') Contact
-      li(class='ml-auto md:ml-6')
+      li(class='hidden 840bp:block')
         include ../partials/darkModeToggle
 div.h-12

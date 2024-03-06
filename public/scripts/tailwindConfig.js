@@ -3,6 +3,7 @@ tailwind.config = {
   theme: {
     extend: {
       screens: {
+        '840bp': '840px',
         // Say you have className={`${MY_CLASSES}`} and you really want to
         // use all the styles that come with MY_CLASSES. But, maybe you don't
         // want the top margins that it comes with (at every min-width breakpoint).
