@@ -22,6 +22,10 @@ https://docs.google.com/document/d/1BkCQu31SdqMYFazJbzlZIp9FNmFkyL_aKWWbfKIZQtY/
   - https://www.prisma.io/blog/type-safe-js-with-jsdoc-typeSaf3js
 - Tailwind support...
   - https://tailwindcss.com/docs/installation/play-cdn
+  - _might_ be worth considering UnoCSS
+    - https://unocss.dev/
+    - https://unocss.dev/presets/wind
+    - https://unocss.dev/integrations/runtime
 - Error handling...
   - See the `wrap` function in `src/utils.js` which is the start of a solution for async error handling.
   - The boilerplate from express-generator (with pug) has some error handling included, so look there for inspiration.
