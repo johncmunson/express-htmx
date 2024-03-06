@@ -6,6 +6,7 @@ https://docs.google.com/document/d/1BkCQu31SdqMYFazJbzlZIp9FNmFkyL_aKWWbfKIZQtY/
 
 ## Technical Notes
 
+- Prefer top and left margins, b/c Adam says so -> https://twitter.com/adamwathan/status/1399473286224957442
 - consider using pug mixins instead of pug partials, or perhaps both
 - Consider adding a `npm run build` command to preprocess the markdown files, instead of processing them on
   every request, kinda like how a static site generator would do
