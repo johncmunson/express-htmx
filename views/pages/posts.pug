@@ -6,6 +6,8 @@ block content
   h1.text-2xl.font-medium
     if tag
       | Posts tagged with:&nbsp;&nbsp;#{tag}
+    else if popular
+      | Popular posts
     else
       | All posts
   div.h-10

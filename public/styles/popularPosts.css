@@ -1,0 +1,11 @@
+.popular-post {
+  position: relative;
+}
+
+.popular-post:before {
+  content: '★';
+  font-size: 0.9rem;
+  position: absolute;
+  left: -1.4rem;
+  top: 0;
+}
