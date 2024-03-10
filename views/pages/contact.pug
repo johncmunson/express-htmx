@@ -1,0 +1,29 @@
+extends ../layouts/mainLayout
+include ../mixins/formCard
+include ../mixins/submitButton
+
+block content
+  - const inputClasses = 'appearance-none px-4 py-3 w-full rounded-md bg-neutral-50 dark:bg-neutral-800 dark:outline dark:outline-1 dark:outline-neutral-600 focus:outline-none focus:ring-1 focus:ring-primary-400 placeholder:text-neutral-500 dark:placeholder:text-neutral-300'
+  - const labelClasses = 'mb-2 block text-sm font-medium'
+  +formCard('Get in touch!')
+    form.mt-6
+      div(class='mb-4 md:flex md:justify-between')
+        div(class='mb-4 flex-1 md:mb-0 md:mr-2')
+          label(class=`${labelClasses}` for='first-name') First Name
+          input#first-name(required aria-required='true' class=`${inputClasses}` type='text' placeholder='First Name')
+        div(class='flex-1 md:ml-2')
+          label(class=`${labelClasses}` for='last-name') Last Name
+          input#last-name(required aria-required='true' class=`${inputClasses}` type='text' placeholder='Last Name')
+      div(class='mb-4 md:flex md:justify-between')
+        div(class='mb-4 flex-1 md:mb-0 md:mr-2')
+          label(class=`${labelClasses}` for='email') Email
+          input#email(required aria-required='true' class=`${inputClasses}` type='email' placeholder='Email')
+        div(class='flex-1 md:ml-2')
+          label(class=`${labelClasses}` for='phone')
+            | Phone&nbsp;
+            span.text-xs (optional)
+          input#phone(class=`${inputClasses}` type='tel' placeholder='Phone')
+      div(class='mb-6')
+        label(class=`${labelClasses}` for='message') Message 
+        textarea#message(required aria-required='true' class=`${inputClasses}` placeholder='Your message here...' rows='5')
+      +submitButton('Submit')
